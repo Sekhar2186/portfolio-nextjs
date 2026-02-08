@@ -12,7 +12,7 @@ const About: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-[3rem] font-bold text-background-dark dark:text-white"
         >
-          About Surya
+          About SEKHAR
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -49,7 +49,7 @@ const About: React.FC = () => {
                 After 20 years in enterprise tech — including 6 years at FAANG and leadership roles at top consulting and enterprise software companies — I've seen what separates AI projects that make it to production from those that don't.
               </p>
               <p>
-                I created AI with Surya to share the patterns that actually work. No fluff. No toy demos. Just battle-tested approaches that get deployed to real enterprise environments.
+                I created Sekhar to share the patterns that actually work. No fluff. No toy demos. Just battle-tested approaches that get deployed to real enterprise environments.
               </p>
             </div>
 

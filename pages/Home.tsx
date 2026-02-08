@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import CourseCard from '../components/CourseCard';
+import { projects } from '../data/projects';
 
 const Home: React.FC = () => {
   return (
@@ -18,24 +19,24 @@ const Home: React.FC = () => {
           >
             <div className="inline-block px-4 py-2 bg-gold/10 border border-gold/50 rounded-full mb-8">
               <span className="text-[0.75rem] font-medium tracking-widest text-gold uppercase">
-                ENTERPRISE AI TRAINING
+                HI, I'M SEKHAR KURAPATI
               </span>
             </div>
             <h1 className="text-[2.5rem] md:text-[4.5rem] font-bold leading-[1.1] tracking-tight text-background-dark dark:text-white mb-6">
-              Master <span className="text-gold">AI</span> That Actually Ships
+              A <span className="text-gold">Full Stack </span> Web Developer
             </h1>
             <p className="text-lg md:text-xl text-background-dark/60 dark:text-white/60 leading-relaxed max-w-[600px] mb-8">
-              20 years in enterprise tech. 6 years at FAANG. I don't teach theory — I teach what gets deployed to production.
+              I build interactive web using React, Next.js, and TypeScript, backed by Node.js I enjoy working with Tailwind CSS and experimenting with AI and automation tools.
             </p>
             <div className="flex items-center gap-2 mb-10 text-sm text-background-dark/50 dark:text-white/50">
               6,700+ YouTube Subscribers <span className="text-gold">•</span> 20+ Years Experience <span className="text-gold">•</span> Fortune 500 Trained
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-gold text-background-dark px-8 py-4 rounded-lg font-semibold transition-all hover:brightness-110 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)]">
-                Explore Courses
+              <button className="bg-gold text-background-dark px-6 py-2 rounded-lg font-semibold transition-all hover:brightness-110 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)]">
+                Resume / CV
               </button>
-              <button className="border border-gold text-gold px-8 py-4 rounded-lg font-semibold transition-all hover:bg-gold/10">
-                Watch Free on YouTube
+              <button className="border border-gold text-gold px-6 py-2 rounded-lg font-semibold transition-all hover:bg-gold/10">
+                Get in touch
               </button>
             </div>
           </motion.div>
@@ -54,38 +55,17 @@ const Home: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-[1000px] mx-auto">
-            <CourseCard
-              tag="AGENTIC AI • LLMS"
-              title="Build Production AI Agents"
-              description="From zero to deployed. Learn to build AI agents that actually work in enterprise environments with patterns that scale."
-              meta="12 modules • 8 hours of content"
-              price="$297"
-              delay={0.1}
-            />
-            <CourseCard
-              tag="CLOUD • DEVOPS"
-              title="Deploy AI to Production"
-              description="Ship AI to production in minutes, not weeks. Learn the infrastructure patterns that actually work at scale."
-              meta="8 modules • 5 hours of content"
-              price="$197"
-              delay={0.2}
-            />
-            <CourseCard
-              tag="STRATEGY • GTM"
-              title="Enterprise AI Strategy"
-              description="Turn your AI prototype into a product that sells. Learn positioning, pricing, and go-to-market for AI products."
-              meta="6 modules • 4 hours of content"
-              price="$497"
-              delay={0.3}
-            />
-            <CourseCard
-              tag="1:1 MENTORSHIP"
-              title="Private Coaching"
-              description="Direct access to 20 years of experience. Personalized guidance for your specific AI challenges."
-              meta="4 sessions per month"
-              price="$1,500/mo"
-              delay={0.4}
-            />
+            {projects.slice(0, 4).map((project) => (
+              <CourseCard
+                key={project.id}
+                tag={project.tag}
+                title={project.title}
+                description={project.description}
+                meta={project.meta}
+                price={project.price}
+                delay={project.delay}
+              />
+            ))}
           </div>
         </div>
       </section>

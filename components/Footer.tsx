@@ -9,17 +9,16 @@ const Footer: React.FC = () => {
         {/* LEFT: Logo */}
         <div className="flex justify-center md:justify-start">
           <Link to="/" className="flex items-center">
-            <span className="text-gold font-bold text-xl">AI</span>
-            <span className="text-white font-normal text-xl">with Surya</span>
+            <span className="text-gold font-bold text-xl">Sekhar</span>
           </Link>
         </div>
 
         {/* CENTER: Links */}
         <div className="flex flex-wrap justify-center gap-6">
           {[
-            { name: 'Courses', path: '/projects' },
+            { name: 'Projects', path: '/projects' },
             { name: 'About', path: '/about' },
-            { name: 'YouTube', path: '#' },
+            { name: 'Mail', path: '#' },
             { name: 'Contact', path: '/contact' },
             { name: 'Privacy', path: '#' },
             { name: 'Terms', path: '#' },
@@ -36,7 +35,7 @@ const Footer: React.FC = () => {
 
         {/* RIGHT: Copyright */}
         <div className="text-center md:text-right text-white/40 text-sm">
-          © 2025 AI with Surya. All rights reserved.
+          © 2025 Sekhar. All rights reserved.
         </div>
       </div>
     </footer>
