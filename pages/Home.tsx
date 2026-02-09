@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import CourseCard from '../components/CourseCard';
+import { TextHoverEffect } from '../components/ui/text-hover-effect';
 import { projects } from '../data/projects';
 
 const Home: React.FC = () => {
@@ -68,6 +69,11 @@ const Home: React.FC = () => {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* TEXT HOVER EFFECT SECTION */}
+      <section className="h-[12rem] flex items-center justify-center">
+        <TextHoverEffect text="SEKHAR" />
       </section>
 
       {/* CTA SECTION */}
