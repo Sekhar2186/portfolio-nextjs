@@ -6,6 +6,44 @@ import { TextHoverEffect } from '../components/ui/text-hover-effect';
 import { projects } from '../data/projects';
 
 const Home: React.FC = () => {
+  const [feedbackStatus, setFeedbackStatus] = React.useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [feedbackMessage, setFeedbackMessage] = React.useState("");
+  const [feedbackInput, setFeedbackInput] = React.useState("");
+
+  const handleFeedbackSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!feedbackInput.trim()) return;
+
+    setFeedbackStatus('submitting');
+
+    const formData = new FormData();
+    formData.append("access_key", "20a69267-0040-4122-8619-abf794f3efe7"); // Applied your Web3Forms Access Key
+    formData.append("feedback", feedbackInput);
+    formData.append("subject", "New Portfolio Feedback");
+    formData.append("from_name", "Portfolio Visitor");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setFeedbackStatus('success');
+        setFeedbackMessage("Feedback sent! Thank you.");
+        setFeedbackInput("");
+      } else {
+        setFeedbackStatus('error');
+        setFeedbackMessage(data.message || "Something went wrong.");
+      }
+    } catch (error) {
+      setFeedbackStatus('error');
+      setFeedbackMessage("Failed to send feedback.");
+    }
+  };
+
   return (
     <div className="bg-background-light dark:bg-background-dark min-h-screen">
       {/* HERO SECTION */}
@@ -30,7 +68,7 @@ const Home: React.FC = () => {
               I build interactive web using React, Next.js, and TypeScript, backed by Node.js I enjoy working with Tailwind CSS and experimenting with AI and automation tools.
             </p>
             <div className="flex items-center gap-2 mb-10 text-sm text-background-dark/50 dark:text-white/50">
-              6,700+ YouTube Subscribers <span className="text-gold">•</span> 20+ Years Experience <span className="text-gold">•</span> Fortune 500 Trained
+              Full Stack Developer <span className="text-gold">•</span> Machine Learning<span className="text-gold">•</span>Artificial Intelligence <span className="text-gold">•</span> Deep Learning
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <button className="bg-gold text-background-dark px-6 py-2 rounded-lg font-semibold transition-all hover:brightness-110 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)]">
@@ -84,9 +122,29 @@ const Home: React.FC = () => {
           <p className="text-lg text-background-dark/60 dark:text-white/60 mb-10">
             I'm a software engineer who loves new challenges, passionate about technology and intersection of AI and web development.
           </p>
-          <button className="bg-gold text-background-dark px-10 py-3 rounded-lg text-lg font-semibold transition-all hover:shadow-[0_0_40px_rgba(212,175,55,0.5)]">
-            Send Feedback
-          </button>
+
+          <form onSubmit={handleFeedbackSubmit} className="max-w-[400px] mx-auto space-y-4">
+            <textarea
+              value={feedbackInput}
+              onChange={(e) => setFeedbackInput(e.target.value)}
+              placeholder="Your feedback..."
+              required
+              className="w-full bg-surface-light dark:bg-[#0a0a12] border border-gold-subtle rounded-lg px-4 py-3 text-background-dark dark:text-white focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all resize-none shadow-sm"
+              rows={3}
+            />
+            {feedbackMessage && (
+              <div className={`text-sm font-medium ${feedbackStatus === 'success' ? 'text-green-500' : 'text-red-500'}`}>
+                {feedbackMessage}
+              </div>
+            )}
+            <button
+              type="submit"
+              disabled={feedbackStatus === 'submitting'}
+              className="bg-gold text-background-dark px-10 py-3 rounded-lg text-lg font-semibold transition-all hover:shadow-[0_0_40px_rgba(212,175,55,0.5)] disabled:opacity-50 disabled:cursor-not-allowed w-full"
+            >
+              {feedbackStatus === 'submitting' ? 'Sending...' : 'Send Feedback'}
+            </button>
+          </form>
           <p className="mt-6 text-sm text-background-dark/40 dark:text-white/40"></p>
         </div>
       </section>

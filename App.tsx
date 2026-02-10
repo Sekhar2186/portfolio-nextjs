@@ -7,6 +7,8 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import SocialSidebar from './components/SocialSidebar';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -21,7 +23,9 @@ const App: React.FC = () => {
   return (
     <Router>
       <ScrollToTop />
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen relative">
+        <SocialSidebar />
+        <ScrollToTopButton />
         <Navbar />
         <main className="flex-grow">
           <Routes>
