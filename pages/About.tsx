@@ -27,14 +27,18 @@ const About: React.FC = () => {
       {/* CONTENT */}
       <section className="py-20 px-6 max-w-[1000px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-[40%_60%] gap-16 items-start">
-          {/* LEFT IMAGE PLACEHOLDER */}
+          {/* LEFT IMAGE */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
-            className="aspect-[3/4] bg-surface-light dark:bg-white/5 border-2 border-dashed border-gold/30 rounded-2xl flex items-center justify-center text-background-dark/30 dark:text-white/30 text-sm shadow-2xl"
+            className="aspect-[3/4] bg-surface-light dark:bg-white/5 border border-gold/10 rounded-2xl overflow-hidden shadow-2xl"
             style={{ boxShadow: '0 0 60px rgba(212,175,55,0.1)' }}
           >
-            About Photo
+            <img
+              src="/assets/sekhar.png"
+              alt="Sekhar Kurapati"
+              className="w-full h-full object-cover"
+            />
           </motion.div>
 
           {/* RIGHT BIO */}
@@ -46,11 +50,15 @@ const About: React.FC = () => {
             <h2 className="text-[2rem] font-semibold text-background-dark dark:text-white mb-6">I Build AI That Ships</h2>
             <div className="space-y-6 text-background-dark/70 dark:text-white/70 text-[1.125rem] leading-relaxed">
               <p>
-                After 20 years in enterprise tech — including 6 years at FAANG and leadership roles at top consulting and enterprise software companies — I've seen what separates AI projects that make it to production from those that don't.
+                From interactive front-end experiences to backend systems and machine learning models, I enjoy exploring how ideas turn into working software. I care about clean design, thoughtful interactions, and code that’s easy to understand and scale.
               </p>
               <p>
-                I created Sekhar to share the patterns that actually work. No fluff. No toy demos. Just battle-tested approaches that get deployed to real enterprise environments.
+                My interests include full-stack web development, machine learning, and building interactive applications with a strong focus on usability and user experience. I believe effective software should combine reliable functionality with simplicity and intuitive design.
               </p>
+              <p>
+                I enjoy learning new technologies, experimenting with ideas, and continuously strengthening my skills through hands-on, project-based work.
+              </p>
+
             </div>
 
             {/* CREDIBILITY BADGES */}

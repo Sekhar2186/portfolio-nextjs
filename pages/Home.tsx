@@ -72,7 +72,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* TEXT HOVER EFFECT SECTION */}
-      <section className="h-[12rem] flex items-center justify-center">
+      <section className="h-[18rem] flex items-center justify-center">
         <TextHoverEffect text="SEKHAR" />
       </section>
 
@@ -80,14 +80,14 @@ const Home: React.FC = () => {
       <section className="relative py-[160px] text-center overflow-hidden">
         <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_rgba(212,175,55,0.08)_0%,_transparent_70%)]" />
         <div className="relative z-10 max-w-[600px] mx-auto px-6">
-          <h2 className="text-[2.5rem] font-semibold text-background-dark dark:text-white mb-4">Ready to Build AI That Ships?</h2>
+          <h2 className="text-[1.70rem] font-semibold text-background-dark dark:text-white mb-4">Where AI Meets Scalable Web Engineering</h2>
           <p className="text-lg text-background-dark/60 dark:text-white/60 mb-10">
-            Join 6,700+ practitioners learning enterprise AI patterns that actually work in production.
+            I'm a software engineer who loves new challenges, passionate about technology and intersection of AI and web development.
           </p>
-          <button className="bg-gold text-background-dark px-12 py-5 rounded-lg text-lg font-semibold transition-all hover:shadow-[0_0_40px_rgba(212,175,55,0.5)]">
-            Get Started Today
+          <button className="bg-gold text-background-dark px-10 py-3 rounded-lg text-lg font-semibold transition-all hover:shadow-[0_0_40px_rgba(212,175,55,0.5)]">
+            Send Feedback
           </button>
-          <p className="mt-6 text-sm text-background-dark/40 dark:text-white/40">30-day money back guarantee</p>
+          <p className="mt-6 text-sm text-background-dark/40 dark:text-white/40"></p>
         </div>
       </section>
     </div>

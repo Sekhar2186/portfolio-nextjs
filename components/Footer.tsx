@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* CENTER: Links */}
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex flex-wrap justify-center gap-5">
           {[
             { name: 'Projects', path: '/projects' },
             { name: 'About', path: '/about' },
@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
 
         {/* RIGHT: Copyright */}
         <div className="text-center md:text-right text-white/40 text-sm">
-          © 2025 Sekhar. All rights reserved.
+          © 2026 Sekhar. All rights reserved.
         </div>
       </div>
     </footer>

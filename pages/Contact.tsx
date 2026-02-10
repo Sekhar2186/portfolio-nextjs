@@ -17,7 +17,7 @@ const Contact: React.FC = () => {
       >
         <h1 className="text-[2.5rem] font-bold text-background-dark dark:text-white mb-4">Get in Touch</h1>
         <p className="text-background-dark/60 dark:text-white/60 mb-10">
-          Have a question? Want to collaborate? Drop me a message.
+          Have a question? Want to connect? Drop me a message.
         </p>
 
         <form onSubmit={handleSubmit} className="text-left space-y-5">
