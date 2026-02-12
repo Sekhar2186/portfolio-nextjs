@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import CourseCard from '../components/CourseCard';
 import { TextHoverEffect } from '../components/ui/text-hover-effect';
 import { projects } from '../data/projects';
+import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
   const [feedbackStatus, setFeedbackStatus] = React.useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
@@ -71,12 +72,19 @@ const Home: React.FC = () => {
               Full Stack Developer <span className="text-gold">•</span> Machine Learning<span className="text-gold">•</span>Artificial Intelligence <span className="text-gold">•</span> Deep Learning
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-gold text-background-dark px-6 py-2 rounded-lg font-semibold transition-all hover:brightness-110 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)]">
+              <a
+                href="/assets/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-gold text-background-dark px-6 py-2 rounded-lg font-semibold transition-all hover:brightness-110 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)]"
+              >
                 Resume / CV
-              </button>
-              <button className="border border-gold text-gold px-6 py-2 rounded-lg font-semibold transition-all hover:bg-gold/10">
-                Get in touch
-              </button>
+              </a>
+              <Link to="/contact">
+                <button className="border border-gold text-gold px-6 py-2 rounded-lg font-semibold transition-all hover:bg-gold/10">
+                  Get in touch
+                </button>
+              </Link>
             </div>
           </motion.div>
         </div>

@@ -7,6 +7,8 @@ const Navbar: React.FC = () => {
   const location = useLocation();
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
 
   useEffect(() => {
     const isDark = document.documentElement.classList.contains('dark');
@@ -73,7 +75,39 @@ const Navbar: React.FC = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg>
               )}
             </button>
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden p-2 text-gold"
+            >
+              {isMenuOpen ? "✕" : "☰"}
+            </button>
+
           </div>
+          {/* Mobile Menu */}
+          {isMenuOpen && (
+            <div className="md:hidden fixed top-[72px] left-0 right-0 bg-background-light dark:bg-background-dark border-b border-gold-subtle px-6 py-6 flex flex-col gap-6 z-40">
+              {[
+                { name: 'Home', path: '/' },
+                { name: 'About', path: '/about' },
+                { name: 'Projects', path: '/projects' },
+                { name: 'Contact', path: '/contact' },
+              ].map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`text-base font-medium transition-colors hover:text-gold ${isActive(link.path)
+                    ? 'text-gold'
+                    : 'text-background-dark dark:text-white'
+                    }`}
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          )}
+
         </div>
       </nav>
       <Search isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
