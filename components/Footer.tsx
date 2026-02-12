@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
           {[
             { name: 'Projects', path: '/projects' },
             { name: 'About', path: '/about' },
-            { name: 'Mail', path: '#' },
+            { name: 'Mail', path: 'mailto:somasekharkurapati6423@gmail.com' },
             { name: 'Contact', path: '/contact' },
             { name: 'Privacy', path: '#' },
             { name: 'Terms', path: '#' },

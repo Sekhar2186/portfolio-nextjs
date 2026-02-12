@@ -6,27 +6,27 @@ const About: React.FC = () => {
   return (
     <div className="bg-background-light dark:bg-background-dark min-h-screen">
       {/* HERO */}
-      <section className="pt-[140px] pb-20 text-center px-6">
+      <section className="pt-[120px] pb-20 text-center px-6">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-[3rem] font-bold text-background-dark dark:text-white"
         >
-          About SEKHAR
+          About Me
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="text-background-dark/60 dark:text-white/60 text-xl mt-4"
+          className="text-background-dark/60 dark:text-white/60 text-xl mt-2"
         >
-          20 years building enterprise technology
+          I build innovative, real-world solutions by relentlessly exploring and mastering cutting-edge technologies.
         </motion.p>
       </section>
 
       {/* CONTENT */}
-      <section className="py-20 px-6 max-w-[1000px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-[40%_60%] gap-16 items-start">
+      <section className="py-20 px-6 max-w-[1000px] mx-auto pt-[10px]">
+        <div className="grid grid-cols-1 md:grid-cols-[40%_60%] gap-12 items-start">
           {/* LEFT IMAGE */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -47,7 +47,7 @@ const About: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <h2 className="text-[2rem] font-semibold text-background-dark dark:text-white mb-6">I Build AI That Ships</h2>
+            <h2 className="text-[2rem] font-semibold text-background-dark dark:text-white mb-4">I Build AI That Ships</h2>
             <div className="space-y-6 text-background-dark/70 dark:text-white/70 text-[1.125rem] leading-relaxed">
               <p>
                 From interactive front-end experiences to backend systems and machine learning models, I enjoy exploring how ideas turn into working software. I care about clean design, thoughtful interactions, and code that’s easy to understand and scale.
@@ -63,7 +63,7 @@ const About: React.FC = () => {
 
             {/* CREDIBILITY BADGES */}
             <div className="flex flex-wrap gap-4 mt-10">
-              {['FAANG Experience', 'Big 4 Consulting', 'Enterprise Software'].map((badge) => (
+              {['Artificial Intelligence', 'Data Science', 'Full-Stack Developer'].map((badge) => (
                 <div
                   key={badge}
                   className="bg-gold/10 border border-gold/30 text-gold px-4 py-2 rounded-md text-[0.75rem] font-medium uppercase tracking-wider"
