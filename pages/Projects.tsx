@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import CourseCard from '../components/CourseCard';
+import CourseCard from '../components/Projectcard';
 import { projects } from '../data/projects';
 
 const Projects: React.FC = () => {

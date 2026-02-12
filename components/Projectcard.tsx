@@ -38,6 +38,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ tag, title, description, meta, 
           <span className="text-sm font-bold text-gold">
             {price}
           </span>
+
           <button className="text-gold font-medium hover:underline flex items-center gap-1 group/link">
             View Details <span className="group-hover/link:translate-x-1 transition-transform">→</span>
           </button>

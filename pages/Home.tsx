@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import CourseCard from '../components/CourseCard';
+import CourseCard from '../components/Projectcard';
 import { TextHoverEffect } from '../components/ui/text-hover-effect';
 import { projects } from '../data/projects';
 import { Link } from 'react-router-dom';
