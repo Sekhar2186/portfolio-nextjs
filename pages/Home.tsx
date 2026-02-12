@@ -66,7 +66,7 @@ const Home: React.FC = () => {
               A <span className="text-gold">Full Stack </span> Web Developer
             </h1>
             <p className="text-lg md:text-xl text-background-dark/60 dark:text-white/60 leading-relaxed max-w-[600px] mb-8">
-              I build interactive web using React, Next.js, and TypeScript, backed by Node.js I enjoy working with Tailwind CSS and experimenting with AI and automation tools.
+              I build interactive web using React, Next.js, and TypeScript, Tailwind CSS, backed by Node.js I enjoy working on new things and experimenting with AI and automation tools.
             </p>
             <div className="flex items-center gap-2 mb-10 text-sm text-background-dark/50 dark:text-white/50">
               Full Stack Developer <span className="text-gold">•</span> Machine Learning<span className="text-gold">•</span>Artificial Intelligence <span className="text-gold">•</span> Deep Learning
