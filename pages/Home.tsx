@@ -71,17 +71,17 @@ const Home: React.FC = () => {
             <div className="flex items-center gap-2 mb-10 text-sm text-background-dark/50 dark:text-white/50">
               Full Stack Developer <span className="text-gold">•</span> Machine Learning<span className="text-gold">•</span>Artificial Intelligence <span className="text-gold">•</span> Deep Learning
             </div>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-row items-start justify-center sm:justify-start gap-4">
               <a
                 href="/assets/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-gold text-background-dark px-6 py-2 rounded-lg font-semibold transition-all hover:brightness-110 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)]"
+                className="bg-gold text-background-dark px-8 py-3 rounded-lg font-semibold transition-all hover:brightness-110 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)]"
               >
                 Resume / CV
               </a>
               <Link to="/contact">
-                <button className="border border-gold text-gold px-6 py-2 rounded-lg font-semibold transition-all hover:bg-gold/10">
+                <button className="border border-gold text-gold px-8 py-3 rounded-lg font-semibold transition-all hover:bg-gold/10">
                   Get in touch
                 </button>
               </Link>
