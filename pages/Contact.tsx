@@ -97,7 +97,7 @@ const Contact: React.FC = () => {
         <div className="mt-10 text-center">
           <p className="text-background-dark/40 dark:text-white/40 text-sm">
             Or email directly:{' '}
-            <a href="mailto:hello@aiwithsurya.com" className="text-gold hover:underline">
+            <a href="mailto:somasekharkurapati6423@gmail.com" className="text-gold hover:underline">
               somasekharkurapati6423@gmail.com
             </a>
           </p>
