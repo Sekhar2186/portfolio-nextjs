@@ -21,19 +21,19 @@ const SocialSidebar: React.FC = () => {
             name: 'Instagram',
             icon: <Instagram size={24} />,
             href: 'https://www.instagram.com/kurapatisomasekhar',
-            color: 'text-white hover:text-white/80'
+            color: 'text-black/60 dark:text-white/80 hover:text-foreground/80'
         },
         {
             name: 'LinkedIn',
-            icon: <Linkedin size={24} fill="#0077b5" stroke="none" />,
+            icon: <Linkedin size={24} />,
             href: 'https://linkedin.com/in/somasekhar6423',
-            color: 'text-[#0077b5] hover:opacity-80'
+            color: 'text-black/60 dark:text-white/80 hover:text-foreground/80'
         },
         {
             name: 'GitHub',
             icon: <Github size={24} />,
             href: 'https://github.com/Sekhar2186',
-            color: 'text-white hover:text-white/80'
+            color: 'text-black/60 dark:text-white/80 hover:text-foreground/80'
         }
     ];
 
@@ -42,8 +42,7 @@ const SocialSidebar: React.FC = () => {
             <motion.div
                 initial={{ x: -100 }}
                 animate={{ x: 0 }}
-                className="bg-[#0a0a0a] border-y border-r border-white/5 rounded-r-2xl py-6 px-4 flex flex-col gap-8 shadow-2xl"
-                style={{ boxShadow: '10px 0 30px rgba(0,0,0,0.5)' }}
+                className="bg-white dark:bg-black border-y border-r border-black/10 dark:border-white/10 rounded-r-2xl py-6 px-4 flex flex-col gap-8"
             >
                 {socials.map((social, index) => (
                     <motion.a
