@@ -76,12 +76,12 @@ const Home: React.FC = () => {
                 href="/assets/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gold text-background-dark px-8 py-3 rounded-lg font-semibold transition-all hover:brightness-110 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)]"
+                className="bg-gold text-background-dark px-6 py-2 rounded-lg font-semibold transition-all hover:brightness-110 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)]"
               >
                 Resume / CV
               </a>
               <Link to="/contact">
-                <button className="border border-gold text-gold px-8 py-3 rounded-lg font-semibold transition-all hover:bg-gold/10">
+                <button className="border border-gold text-gold px-6 py-2 rounded-lg font-semibold transition-all hover:bg-gold/10">
                   Get in touch
                 </button>
               </Link>
