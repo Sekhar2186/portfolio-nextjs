@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 h-[72px] z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-xl border-b border-gold-subtle">
+      <nav className="fixed top-0 left-0 right-0 h-[72px] z-50 bg-background-light/30 dark:bg-background-dark/30 backdrop-blur-xl border-b border-gold/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
         <div className="max-w-[1200px] mx-auto h-full px-6 flex items-center justify-between">
           {/* LEFT: Logo */}
           <Link to="/" className="flex items-center group">
@@ -86,7 +86,7 @@ const Navbar: React.FC = () => {
           </div>
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <div className="md:hidden fixed top-[72px] left-0 right-0 bg-background-light dark:bg-background-dark border-b border-gold-subtle px-6 py-6 flex flex-col gap-6 z-40">
+            <div className="md:hidden fixed top-[72px] left-0 right-0 bg-background-light/40 dark:bg-background-dark/40 backdrop-blur-xl border-b border-gold/10 px-6 py-6 flex flex-col gap-6 z-40 shadow-xl">
               {[
                 { name: 'Home', path: '/' },
                 { name: 'About', path: '/about' },
