@@ -94,7 +94,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* PROJECTS SECTION */}
-      <section className="py-[120px]">
+      <section className="py-[60px]">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-[2.5rem] font-semibold text-background-dark dark:text-white">Projects</h2>
@@ -123,7 +123,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* CTA SECTION */}
-      <section className="relative py-[160px] text-center overflow-hidden">
+      <section className="relative py-[70px] text-center overflow-hidden">
         <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_rgba(212,175,55,0.08)_0%,_transparent_70%)]" />
         <div className="relative z-10 max-w-[600px] mx-auto px-6">
           <h2 className="text-[1.70rem] font-semibold text-background-dark dark:text-white mb-4">Where AI Meets Scalable Web Engineering</h2>
