@@ -73,7 +73,7 @@ const Home: React.FC = () => {
             </div>
             <div className="flex flex-row items-start justify-center sm:justify-start gap-4">
               <a
-                href="/assets/resume.pdf"
+                href="/assets/Resume_Sekhar.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gold text-background-dark px-6 py-2 rounded-lg font-semibold transition-all hover:brightness-110 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)]"
