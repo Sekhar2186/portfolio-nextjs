@@ -100,7 +100,7 @@ const Search: React.FC<SearchProps> = ({ isOpen, onClose }) => {
                                         transition={{ delay: index * 0.05 }}
                                     >
                                         <Link
-                                            to="/projects"
+                                            to={`/projects/${project.id}`}
                                             onClick={onClose}
                                             className="block p-6 rounded-xl bg-surface-light dark:bg-white/5 border border-gold-subtle hover:border-gold/40 hover:shadow-[0_0_20px_rgba(212,175,55,0.1)] transition-all group"
                                         >

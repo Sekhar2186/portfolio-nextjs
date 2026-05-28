@@ -30,11 +30,12 @@ const Projects: React.FC = () => {
           {projects.map((project) => (
             <CourseCard
               key={project.id}
+              id={project.id}
               tag={project.tag}
               title={project.title}
               description={project.description}
               meta={project.meta}
-              price={project.price}
+              status={project.status}
               delay={project.delay}
             />
           ))}

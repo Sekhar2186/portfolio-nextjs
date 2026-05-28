@@ -1,17 +1,19 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 interface CourseCardProps {
+  id: string;
   tag: string;
   title: string;
   description: string;
   meta: string;
-  price: string;
+  status: string;
   delay?: number;
 }
 
-const CourseCard: React.FC<CourseCardProps> = ({ tag, title, description, meta, price, delay = 0 }) => {
+const CourseCard: React.FC<CourseCardProps> = ({ id, tag, title, description, meta, status, delay = 0 }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -36,12 +38,12 @@ const CourseCard: React.FC<CourseCardProps> = ({ tag, title, description, meta, 
         </div>
         <div className="flex items-center justify-between">
           <span className="text-sm font-bold text-gold">
-            {price}
+            {status}
           </span>
 
-          <button className="text-gold font-medium hover:underline flex items-center gap-1 group/link">
+          <Link to={`/projects/${id}`} className="text-gold font-medium hover:underline flex items-center gap-1 group/link">
             View Details <span className="group-hover/link:translate-x-1 transition-transform">→</span>
-          </button>
+          </Link>
         </div>
       </div>
     </motion.div>
@@ -49,3 +51,4 @@ const CourseCard: React.FC<CourseCardProps> = ({ tag, title, description, meta, 
 };
 
 export default CourseCard;
+

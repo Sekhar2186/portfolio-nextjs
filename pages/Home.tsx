@@ -105,11 +105,12 @@ const Home: React.FC = () => {
             {projects.slice(0, 4).map((project) => (
               <CourseCard
                 key={project.id}
+                id={project.id}
                 tag={project.tag}
                 title={project.title}
                 description={project.description}
                 meta={project.meta}
-                price={project.price}
+                status={project.status}
                 delay={project.delay}
               />
             ))}
@@ -118,9 +119,9 @@ const Home: React.FC = () => {
       </section>
 
       {/* TEXT HOVER EFFECT SECTION */}
-      <section className="h-[18rem] flex items-center justify-center">
+      {/*<section className="h-[18rem] flex items-center justify-center">
         <TextHoverEffect text="SEKHAR" />
-      </section>
+      </section> */}
 
       {/* CTA SECTION */}
       <section className="relative py-[70px] text-center overflow-hidden">
