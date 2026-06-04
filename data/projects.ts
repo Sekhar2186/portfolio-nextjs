@@ -43,7 +43,7 @@ export const projects: Project[] = [
         delay: 0.2,
         githubUrl: "https://github.com/Sekhar2186/Luxro",
         liveUrl: "https://luxro-ten.vercel.app/",
-        detailedDescription: "Vendora is a modern full-stack eCommerce platform designed for high performance and optimal user experience. Built with Next.js and TypeScript, it features a scalable serverless architecture, secure user authentication with JWT/OAuth, real-time database management using MongoDB, and an intuitive responsive design powered by TailwindCSS.",
+        detailedDescription: "Luxro is a modern full-stack eCommerce platform designed for high performance and optimal user experience. Built with Next.js and TypeScript, it features a scalable serverless architecture, secure user authentication with JWT/OAuth, real-time database management using MongoDB, and an intuitive responsive design powered by TailwindCSS.",
         features: [
             "Secure, seamless authentication and profile management",
             "Robust product management, including advanced search, filtering, and categorization",
